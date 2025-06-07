@@ -17,7 +17,7 @@ npm install
 
 3. Inicie o servidor:
 ```
-npm start
+node app.js
 ```
 
 4. Acesse no navegador:
