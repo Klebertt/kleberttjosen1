@@ -1,0 +1,14 @@
+
+<%- include('partials/header') %>
+<h2>Lista de Livros</h2>
+<a href="/books/new">Adicionar novo livro</a>
+<ul>
+  <% books.forEach(book => { %>
+    <li>
+      <strong><%= book.title %></strong> - <%= book.author %> (<%= book.year %>)
+      [ <a href="/books/edit/<%= book.id %>">Editar</a> |
+        <a href="/books/delete/<%= book.id %>" onclick="return confirm('Tem certeza?')">Excluir</a> ]
+    </li>
+  <% }) %>
+</ul>
+<%- include('partials/footer') %>

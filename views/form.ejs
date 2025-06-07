@@ -1,0 +1,16 @@
+
+<%- include('partials/header') %>
+<h2><%= book.id ? 'Editar Livro' : 'Novo Livro' %></h2>
+<form action="<%= action %>" method="POST">
+  <label>Título:</label>
+  <input type="text" name="title" value="<%= book.title || '' %>" required><br>
+
+  <label>Autor:</label>
+  <input type="text" name="author" value="<%= book.author || '' %>"><br>
+
+  <label>Ano:</label>
+  <input type="number" name="year" value="<%= book.year || '' %>"><br>
+
+  <button type="submit">Salvar</button>
+</form>
+<%- include('partials/footer') %>
